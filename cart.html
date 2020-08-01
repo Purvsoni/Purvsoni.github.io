@@ -1,95 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-   <title>Online Shopping</title>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-   <a class="navbar-brand" href="#">Cloth Shop</a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-   </button>
-
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav mr-auto">
-
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">BACK</a>
-        </li>
-
-       </ul>
-
-    
-       
-
-   </div>
-</nav>
-<br><br>
-</head>
-
-<body>
-    <center><h3>Shopping Cart</h3></center><br><br>
-    <table class="table table-bordered table-striped">
-        <tr>
-         <th width="40%">Product</th>
-         <th width="10%">Description</th>
-         <th width="10%">Price</th>
-         <th width="10%">Quantity</th>
-         <th width="10%">Total</th>
-         <th width="10%">Delete</th>
-         <tr>
-            <td><img width='200' height='200' alt='Card image' src='images/2.jpg'></td>
-            <td>HanCock Man White Fit Slim Shirt</td>
-             <td>Rs 500</td>
-             <td><select name="qty" id="qty">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select></td>
-             <td>1</td>
-             <td><a href="#">Remove</a></td>
-
-         </tr>
-         <tr>
-            <td><img width='200' height='200' alt='Card image' src='images/2.jpg'></td>
-            <td>HanCock Man White Fit Slim Shirt</td>
-             <td>Rs 500</td>
-             <td><select name="qty" id="qty">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select></td>
-             <td>1</td>
-             <td><a href="#">Remove</a></td>
-
-         </tr>
-         <tr>
-            <td></td>
-            <td></td>
-             <td><b>SubTotal:</b>Rs.1000</td>
-             <td></td>
-            
-             
-         </tr>
-        </table>
-        <center>
-            <a href="index.html" class="btn btn-secondary">CONTINUE SHOPPING</a>&nbsp;
-
-            <a href="checkout.html" class="btn btn-primary">CHECKOUT</a>&nbsp;
-    
+    <head>
+        <style>
         
-    </center>
-   
+        
+        </style>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+                integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+            <title>Online Shopping</title>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand">Cloth Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+        
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">BACK</a>
+                    </li>
+                    
+                    
+                   
+        
+                </ul>
+        
+               
+               
+            </div>
+        </nav>
+        <br><br>
+        
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>SubTotal</th>
+
+            </tr>
+            <tr>
+                <td>
+                <div class="cart-info">
+                    <img src="images/2.jpg">
+                    <div>
+                       <p>White Shirt</p>
+                       <small>Price:Rs 500</small><br>
+                       <a href="#">Remove</a>
+                    </div>
+                </div>
+                </td>
+                <td><input type="number" value="1" min="0"></td>
+                <td>Rs 1000</td>
+            </tr>
+            <tr>
+                <td>
+                <div class="cart-info">
+                    <img src="images/2.jpg">
+                    <div>
+                       <p>White Shirt</p>
+                       <small>Price:Rs 500</small><br>
+                       <a href="#">Remove</a>
+                    </div>
+                </div>
+                </td>
+                <td><input type="number" value="1" min="0"></td>
+                <td>Rs 1000</td>
+            </tr>
+            <tr>
+                <td>
+                <div class="cart-info">
+                    <img src="images/2.jpg">
+                    <div>
+                       <p>White Shirt</p>
+                       <small>Price:Rs 500</small><br>
+                       <a href="#">Remove</a>
+                    </div>
+                </div>
+                </td>
+                <td><input type="number" value="1" min="0"></td>
+                <td>Rs 1000</td>
+            </tr>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>
+                        SubTotal
+                    </td>
+
+                    <td>
+                            Rs 3000
+                    </td></tr>
+                    <td>
+                        Tax
+                    </td>
+
+                    <td>
+                            Rs 30
+                    </td></tr>
+                    <td>
+                        Total
+                    </td>
+
+                    <td>
+                            Rs 3030
+                    </td></tr>
+                </tr>
+        <tr>
+            <td>
+                <a href="index.html"><button class=button button1">Continue Shopping</button></a>
+                <a href="checkout.html"><button class="button button2" >Checkout</button></a>
+
+            </td>
+        </tr>
+            </table>
+        
+        </div>
+       
+        
+    
+    </div>
+
 </body>
 </html>
