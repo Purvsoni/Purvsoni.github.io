@@ -1,46 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
+  <link rel="stylesheet" href="css/style.css">
+
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Document</title>
 
-  <title>Home</title>
-</head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Cloth Shop</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">Cloth Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+            </li>
         
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">BACK</a>
-          </li>
+
         </ul>
 
-
         
+      
 
-    </ul>
+       
 
+    </div>
+</nav><br><br>
+<style>
     
-    
-
-  </div>
-</nav>
-<br><br>
-
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
 <body>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
   crossorigin="anonymous"></script>
@@ -52,41 +61,31 @@
   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
   crossorigin="anonymous"></script>
 
-    <section class="my-5">
-        <div class="py-5">
-        <center><h2 >Login Here</h2></center>
-        </div>
-    <div class="w-50 m-auto">
-        <form action="" >
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" autocomplete="off" class="form-control" required>
-    </div>
-    <div class="form-group">
-                        <label>Password</label>
-                <input type="password"  name="password" autocomplete="off" class="form-control" required>
-                
-                  
-               
-    </div>
     
     
-            
-    </div>
-    <p align="center">   <button  type="submit" name="login" class="btn btn-primary">Login</button>
-    </p>
-    
-                  
-                  
+<div class="container">
+    <form name="form" action="" onsubmit="return validate()">
+
+      <label for="usrname">Username</label>
+      <input type="text" id="usrname" name="username">
+      
+
+
+  
+      <label for="psw">Password</label>
+    <input type="password" id="pw" name="psw">
+  
+  
+      <input type="submit" value="Login">
     </form>
-  
-    
-    <div> <center><a href="forgotpassword.html">Forgot password?</a></center>
-    <div><center> <a href="register.html">Not Registered Yet?Register Here</a></center>
-   
-    </div>
-    </div>
-  </section>
-  
-  </body>
-  </html>
+    <center>
+    <a href="forgotpassword.html">Forgot Password?</a><br>
+    <a href="register.html">New User?Register Here</a>
+    </center>
+  </div>
+  <script src="js/main.js" ></script>
+ 
+
+ 
+        </body>
+        </html>
