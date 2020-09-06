@@ -1,10 +1,10 @@
 
         function validateform()
         {
-            var name=document.form.username.value;
-            var email=document.form.email.value;
-            var pass=document.form.psw.value;
-            var confirm=document.form.conpsw.value;
+            var name=document.form1.username.value;
+            var email=document.form1.email.value;
+            var pass=document.form1.psw.value;
+            var confirm=document.form1.conpsw.value;
             if(name==null || name=="")
             {
                 alert("UserName is Required");
