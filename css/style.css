@@ -1,25 +1,4 @@
-input {
-    width: 100%;
-   padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 0px;
-    margin-bottom: 16px;
-   
-  }
-  
 
-  input[type=submit] {
-    background-color: blue;
-    color: white;
-  }
-  
-  .container {
-    background-color: #f1f1f1;
-    padding: 10px;
-    bottom: auto;
-  }
 
   #message {
     display:none;
@@ -55,3 +34,4 @@ input {
     left: -35px;
     
   }
+ 

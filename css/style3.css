@@ -20,7 +20,7 @@ th{
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #ff523b;
+    background: #0a178d;
     font-weight: normal;
 }
 
@@ -35,7 +35,7 @@ td input{
 }
 
 td a{
-    color: #ff523b;
+    color: #0a178d;
     font-size: 12px;
 }
 
@@ -51,7 +51,7 @@ td img{
 
 }
 .total-price table{
-    border-top: 3px solid #ff523b;
+    border-top: 3px solid #0a178d;
     width: 100%;
     max-width: 675px;
 }
@@ -65,7 +65,7 @@ th:last-child{
 }
 
 .button {
-        background-color: #ff523b;
+        background-color:#0a178d;
     border: none;
     color: white;
     padding: 10px 30px;
