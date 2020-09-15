@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width">
+ 
+  
+
+
+  <style>
+    .product-slider-section{
+  
+      width: 60%;
+      height: 100vh;
+      display: flex;
+      margin-left: 20%;
+    }
+    .product-slider-section .carousel-inner{
+      cursor: crosshair;
+    }
+    .product-slider-section .carousel-indicators {
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+    .product-slider-section .carousel-indicators li{
+      border: 2px solid transparent;
+      cursor: pointer;
+      float:left;
+      height: auto;
+      margin: 10px 20px 12px 20px;
+      padding: 5px;
+      text-align: center;
+      text-indent: unset;
+      widows: 185px;
+    
+  
+    }
+   .img-fluid{
+     width: 75%;
+     height: 100%;
+   }
+    .product-slider-section .carousel-indicators li .data-slide-image{
+      width: 80px;
+      margin: 0 auto;
+    }
+   @media screen {
+      .product-name{
+        margin-top: 30px;
+      
+      }
+  }
+    
+    .price{
+      margin: 20px 0;
+      font-size: 20px;
+    }
+      .old-price{
+        color: #777;
+        margin-right: 10px;
+        text-decoration: line-through;
+        padding: 5px;
+  
+      }
+    .new-price{
+      background-color: #21a4fb;
+      color: #fff;
+      padding: 5px;
+    }
+    .sale-span{
+      background-color: #21a4fb;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      padding: 4px 10px;
+      right: -30px;
+      text-align: center;
+      top: 4px;
+      transform: rotate(45deg);
+      width: 110px;  
+    }
+    .add-to-cart{
+      border: none;
+      display: block;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+      outline: none;
+      overflow: hidden;
+      position: relative;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      background-color:#222;
+            padding: 17px 60px;
+      margin-right: 0 auto;
+  
+      box-shadow: 0 5px rgba(0,0,0,0.20);
+  
+    
+    }
+   .button ,.form-control
+{
+    background-color:#21a4fb;
+border: none;
+color: white;
+padding: 10px 30px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+
+.but{
+    background-color: #21a4fb;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+
+}
+
+    .add-to-cart span{
+      position: relative;
+      z-index: 1;
+    }
+    .add-to-cart::after{
+      content:"";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 490%;
+      width: 140%;
+      background-color: #21a4fb;
+      color: #fff;
+      transition: all .5s ease-in-out;
+      transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  
+    }
+    .add-to-cart:hover:after{
+      transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">Cloth Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            </ul>
+            <div class="ml-2">
+              <a href="1.html"> <button type="button" class="btn btn-primary" >Cart (<span class="total-count"></span>)</button>
+             </div></a>
+           <div class="ml-2">
+         <button  class="clear-cart btn btn-danger">Clear Cart</button></div>
+           </div>
+
+
+        </div>
+       
+           
+    
+          
+</nav>
+</head>
+
+
+<body>
+  
+<section class="product-slider-section">
+  <div class="container">
+
+    <div id="productslider" class="carousel slide">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <div class="row">
+            <div class="col-12">
+              <div class="carousel-inner">
+              <div class="carousel-item active zoom-image">
+                <img  src="images/1.jpg" class="img-fluid">
+                <span class="sale-span">Sale</span>
+                </div>
+                <div class="carousel-item  zoom-image">
+                  <img src="images/2.jpg" class="img-fluid">
+                  <span class="sale-span">Sale</span>
+                  </div>
+                  <div class="carousel-item  zoom-image">
+                    <img src="images/3.jpg" class="img-fluid">
+                    <span class="sale-span">Sale</span>
+                    </div>
+                    <div class="carousel-item  zoom-image">
+                      <img  src="images/4.jpg" class="img-fluid">
+                      <span class="sale-span">Sale</span>
+                      </div>
+
+
+                
+              </div>
+            </div>
+            <div class="col-12">
+              <ol class="carousel-indicators position-static m-0 justify-content-start">
+                <li data-target="#productslider" data-slide-to="0" class="active">
+                  <div class="data-slide-image">
+                    <img src="images/1.jpg" class="img-fluid">
+                  </div>
+                </li>
+                <li data-target="#productslider" data-slide-to="1">
+                  <div class="data-slide-image">
+                    <img  src="images/2.jpg" class="img-fluid">
+                  </div>
+                </li>
+                <li data-target="#productslider" data-slide-to="2">
+                  <div class="data-slide-image">
+                    <img  src="images/3.jpg" class="img-fluid">
+                  </div>
+                </li>
+                <li data-target="#productslider" data-slide-to="3">
+                  <div class="data-slide-image">
+                    <img  src="images/4.jpg" class="img-fluid">
+                  </div>
+                </li>
+              </ol>
+
+            </div>
+          
+          
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <p><h3 class="product-name">Hancock</h3>
+            Men White Slim Fit Solid Formal</p>
+
+          <p class="price">
+            <span class="old-price">Rs3000</span>
+            <span class="new-price">Rs2000</span>
+            </p>
+            <p>
+              <h5>Select Your Size</h5>
+              <button class="button btn1" >34</button>
+ 
+              <button class="button btn1" >36</button>
+ 
+              <button class="button btn1" >38</button>
+              <button class="button btn2" >40</button>
+              <button class="button btn3" >42</button>
+              <button class="button btn4" >44</button>
+              <br>
+              <br>
+              <div class="d-flex">    
+                
+                <button type="button" class="add-to-cart" data-name="product1" data-price="2000">
+                  <span>Add To Cart</span>
+</button>
+            
+            </div>    
+          
+
+          
+
+            <h5>Sold By:SIDHBALI CREATIONS</h5>
+            <h5>Product Code:15867</h5>
+            100% Original Products<br>
+            Free Delivery on order above Rs. 799<br>
+Pay on delivery might be available<br>
+Easy 30 days returns and exchanges<br>
+Try & Buy might be available<br>
+
+            <br>
+            
+                <h5>BEST OFFERS</h5>
+                This product is already at its best price.<br><br>
+
+                <h5>PRODUCT DETAILS </h5>
+White solid formal shirt, has a spread collar, button placket, long sleeves, a patch pocket<br>
+
+<b>Size & Fit</b><br>
+Slim fit<br>
+The model (height 6') is wearing a size 40<br>
+
+<b>Material & Care</b><br>
+Cotton<br>
+Machine-wash<br>
+             
+ 
+
+             
+            </p>
+
+            
+            
+
+         
+            
+            
+               
+                
+           
+          
+          
+        </div>
+                    
+       
+      </div>
+    </div>
+  </div>
+
+  </section>
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: Rs &nbsp;<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Order now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"></script>
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(function() {
+    $('.zoom-image').each(function(){
+      var originalImagePath=$(this).find('img').data('original-image');
+      $(this).zoom({
+        url:originalImagePath,
+        magnify:1
+      });
+    });
+  });
+
+  var shoppingCart = (function() {
+    // =============================
+    // Private methods and propeties
+    // =============================
+    cart = [];
+    
+    // Constructor
+    function Item(name, price, count) {
+      this.name = name;
+      this.price = price;
+      this.count = count;
+    }
+    
+    // Save cart
+    function saveCart() {
+      sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+    }
+    
+      // Load cart
+    function loadCart() {
+      cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+    }
+    if (sessionStorage.getItem("shoppingCart") != null) {
+      loadCart();
+    }
+    
+  
+    // =============================
+    // Public methods and propeties
+    // =============================
+    var obj = {};
+    
+    // Add to cart
+    obj.addItemToCart = function(name, price, count) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count ++;
+          saveCart();
+          return;
+        }
+      }
+      var item = new Item(name, price, count);
+      cart.push(item);
+      saveCart();
+    }
+    // Set count from item
+    obj.setCountForItem = function(name, count) {
+      for(var i in cart) {
+        if (cart[i].name === name) {
+          cart[i].count = count;
+          break;
+        }
+      }
+    };
+    // Remove item from cart
+    obj.removeItemFromCart = function(name) {
+        for(var item in cart) {
+          if(cart[item].name === name) {
+            cart[item].count --;
+            if(cart[item].count === 0) {
+              cart.splice(item, 1);
+            }
+            break;
+          }
+      }
+      saveCart();
+    }
+  
+    // Remove all items from cart
+    obj.removeItemFromCartAll = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart.splice(item, 1);
+          break;
+        }
+      }
+      saveCart();
+    }
+  
+    // Clear cart
+    obj.clearCart = function() {
+      cart = [];
+      saveCart();
+    }
+  
+    // Count cart 
+    obj.totalCount = function() {
+      var totalCount = 0;
+      for(var item in cart) {
+        totalCount += cart[item].count;
+      }
+      return totalCount;
+    }
+  
+    // Total cart
+    obj.totalCart = function() {
+      var totalCart = 0;
+      for(var item in cart) {
+        totalCart += cart[item].price * cart[item].count;
+      }
+      return Number(totalCart.toFixed(2));
+    }
+  
+    // List cart
+    obj.listCart = function() {
+      var cartCopy = [];
+      for(i in cart) {
+        item = cart[i];
+        itemCopy = {};
+        for(p in item) {
+          itemCopy[p] = item[p];
+  
+        }
+        itemCopy.total = Number(item.price * item.count).toFixed(2);
+        cartCopy.push(itemCopy)
+      }
+      return cartCopy;
+    }
+  
+    // cart : Array
+    // Item : Object/Class
+    // addItemToCart : Function
+    // removeItemFromCart : Function
+    // removeItemFromCartAll : Function
+    // clearCart : Function
+    // countCart : Function
+    // totalCart : Function
+    // listCart : Function
+    // saveCart : Function
+    // loadCart : Function
+    return obj;
+  })();
+  
+  
+  // *****************************************
+  // Triggers / Events
+  // ***************************************** 
+  // Add item
+  $('.add-to-cart').click(function(event) {
+    event.preventDefault();
+    var name = $(this).data('name');
+    var price = Number($(this).data('price'));
+    shoppingCart.addItemToCart(name, price, 1);
+    displayCart();
+  });
+  
+  // Clear items
+  $('.clear-cart').click(function() {
+    shoppingCart.clearCart();
+    displayCart();
+  });
+  
+  
+  function displayCart() {
+    var cartArray = shoppingCart.listCart();
+    var output = "";
+    for(var i in cartArray) {
+      output += "<tr>"
+        + "<td>" + cartArray[i].name + "</td>" +"</tr>" + "<tr>" +
+        + "<td>(" + cartArray[i].price + ")</td>"
+        + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+        + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+        + " = " 
+        + "<td>" + cartArray[i].total + "</td>" 
+        +  "</tr>";
+    }
+    $('.show-cart').html(output);
+    $('.total-cart').html(shoppingCart.totalCart());
+    $('.total-count').html(shoppingCart.totalCount());
+  }
+  
+  // Delete item button
+  
+  $('.show-cart').on("click", ".delete-item", function(event) {
+    var name = $(this).data('name')
+    shoppingCart.removeItemFromCartAll(name);
+    displayCart();
+  })
+  
+  
+  // -1
+  $('.show-cart').on("click", ".minus-item", function(event) {
+    var name = $(this).data('name')
+    shoppingCart.removeItemFromCart(name);
+    displayCart();
+  })
+  // +1
+  $('.show-cart').on("click", ".plus-item", function(event) {
+    var name = $(this).data('name')
+    shoppingCart.addItemToCart(name);
+    displayCart();
+  })
+  
+  // Item count input
+  $('.show-cart').on("change", ".item-count", function(event) {
+     var name = $(this).data('name');
+     var count = Number($(this).val());
+    shoppingCart.setCountForItem(name, count);
+    displayCart();
+  });
+  
+  displayCart();
+  
+</script>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
