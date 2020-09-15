@@ -171,8 +171,8 @@ var shoppingCart = (function() {
         + "<td>(" + cartArray[i].price + ")</td>"
         + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
         + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button><h5>Price</h5></div></td>"
-        +"<td><h5>Rs" +cartArray[i].price +"/-</h5></td>"
+        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button><h6>Price</h6></div></td>"
+        +"<td><h6>Rs" +cartArray[i].price +"/-</h6></td>"
 
         + "<td><button class='delete-item btn btn-outline-danger btn-xs' data-name=" + cartArray[i].name + "><i class='fa fa-trash' aria-hidden='true'  ></i></button></td>"
         
