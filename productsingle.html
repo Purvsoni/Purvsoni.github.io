@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+  <meta name="viewport" content="width=device-width">
+ 
   
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum scale=1>
-
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-   <title>Online Shopping</title>
 
 
-   
+<link rel="stylesheet" href="css/style5.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand">Cloth Shop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,12 +33,168 @@
 
         </ul>
         </div>
+        <div class="row">
+          <div class="col">
+            <ul class="navbar-nav ml-auto"> 
+              <div class="mr-2">
+                 <a href="shopcart.html"> <button type="button" class="btn btn-primary"  >Cart (<span class="total-count"></span>)</button>
+                </div></a>
+              <div class="mr-2">
+            <button  class="clear-cart btn btn-danger">Clear Cart</button></div>
+              </div>
+      </div>
 </nav>
-<br><br>
 </head>
 
+
 <body>
+    <p style="color: red;">
+       
+        On Hovering over the image,image can be zoomed in and below the image is the slider which contains view of product from different angle.
+        On Clicking add to cart ,Product will be add to cart in navigation bar and clicking on cart button will redirect to shopcart.html.
+            </p>
   
+<section class="product-slider-section">
+  <div class="container">
+
+    <div id="productslider" class="carousel slide">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <div class="row">
+            <div class="col-12">
+              <div class="carousel-inner">
+              <div class="carousel-item active zoom-image">
+                <img  src="images/1.jpg" class="img-fluid">
+                <span class="sale-span">Sale</span>
+                </div>
+                <div class="carousel-item  zoom-image">
+                  <img src="images/2.jpg" class="img-fluid">
+                  <span class="sale-span">Sale</span>
+                  </div>
+                  <div class="carousel-item  zoom-image">
+                    <img src="images/3.jpg" class="img-fluid">
+                    <span class="sale-span">Sale</span>
+                    </div>
+                    <div class="carousel-item  zoom-image">
+                      <img  src="images/4.jpg" class="img-fluid">
+                      <span class="sale-span">Sale</span>
+                      </div>
+
+
+                
+              </div>
+            </div>
+            <div class="col-12">
+              <ol class="carousel-indicators position-static m-0 justify-content-start">
+                <li data-target="#productslider" data-slide-to="0" class="active">
+                  <div class="data-slide-image">
+                    <img src="images/1.jpg" class="img-fluid">
+                  </div>
+                </li>
+                <li data-target="#productslider" data-slide-to="1">
+                  <div class="data-slide-image">
+                    <img  src="images/2.jpg" class="img-fluid">
+                  </div>
+                </li>
+                <li data-target="#productslider" data-slide-to="2">
+                  <div class="data-slide-image">
+                    <img  src="images/3.jpg" class="img-fluid">
+                  </div>
+                </li>
+                <li data-target="#productslider" data-slide-to="3">
+                  <div class="data-slide-image">
+                    <img  src="images/4.jpg" class="img-fluid">
+                  </div>
+                </li>
+              </ol>
+
+            </div>
+          
+          
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <p><h3 class="product-name">Hancock</h3>
+            Men White Slim Fit Solid Formal</p>
+
+          <p class="price">
+            <span class="old-price">Rs3000</span>
+            <span class="new-price">Rs2000</span>
+            </p>
+            <p>
+              <h5>Select Your Size</h5>
+              <button class="button btn1" >34</button>
+ 
+              <button class="button btn1" >36</button>
+ 
+              <button class="button btn1" >38</button>
+              <button class="button btn2" >40</button>
+              <button class="button btn3" >42</button>
+              <button class="button btn4" >44</button>
+              <br>
+              <br>
+              <div class="d-flex">    
+                
+                <button type="button" class="add-to-cart" data-name="product5" data-price="2000">
+                  <span>Add To Cart</span>
+</button>
+            
+            </div>    
+          
+
+          
+
+            <h5>Sold By:SIDHBALI CREATIONS</h5>
+            <h5>Product Code:15867</h5>
+            100% Original Products<br>
+            Free Delivery on order above Rs. 799<br>
+Pay on delivery might be available<br>
+Easy 30 days returns and exchanges<br>
+Try & Buy might be available<br>
+
+            <br>
+            
+                <h5>BEST OFFERS</h5>
+                This product is already at its best price.<br><br>
+
+                <h5>PRODUCT DETAILS </h5>
+White solid formal shirt, has a spread collar, button placket, long sleeves, a patch pocket<br>
+
+<b>Size & Fit</b><br>
+Slim fit<br>
+The model (height 6') is wearing a size 40<br>
+
+<b>Material & Care</b><br>
+Cotton<br>
+Machine-wash<br>
+             
+ 
+
+             
+            </p>
+
+            
+            
+
+         
+            
+            
+               
+                
+           
+          
+          
+        </div>
+                    
+       
+      </div>
+    </div>
+  </div>
+
+  </section>
+  
+
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
   crossorigin="anonymous"></script>
@@ -54,215 +205,23 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
   crossorigin="anonymous"></script>
-    <div class="image">
-    <div class="row">
-    <div class="column">
-        <img  src='images/1.jpg' >
-        <img  src='images/2.jpg' >
-      
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="js/cart.js">
+
+</Script>
+
+
 
     </div>
-    
-    
-    </div>
-
-    <div class="row">
-    
-    <div class="column">
-       
-        <img  src='images/3.jpg'>
-        <img  src='images/4.jpg'>
-  
-
-    </div>
-
-    
-    </div>
-    </div>
-<div class="row"> 
-      <div class="col-md-6" >
-        
-        <p><h4>Hancock</h4>
-         Men White Slim Fit Solid Formal</p>
-         ____________________________________________________________________________________
-
-         <h4>Rs 500</h4>____________________________________________________________________________________
-         Inclusive of all taxes
-         
-         
-             <h3>Select Your Size</h3>
-             <button class="button btn1" >34</button>
-
-             <button class="button btn1" >36</button>
-
-             <button class="button btn1" >38</button>
-             <button class="button btn2" >40</button>
-             <button class="button btn3" >42</button>
-             <button class="button btn4" >44</button>
-            
-             <br>
-             <br><h5>Delivery Options</h5>
-             <input type="text" name="delivery" placeholder="Enter Pincode" class="form-control"><button class="button">Check</button>
-             
-         <br><br>
-       <a href="cart.html">    
-              <button class="but">Add To Cart</button>
-
-</a>
-         
-
-             <h5>Sold By:SIDHBALI CREATIONS</h5>
-             <h5>Product Code:15867</h5>
-             100% Original Products<br>
-             Free Delivery on order above Rs. 799<br>
-Pay on delivery might be available<br>
-Easy 30 days returns and exchanges<br>
-Try & Buy might be available<br>
-
-             <br>
-             
-                 <h5>BEST OFFERS</h5>
-                 This product is already at its best price.<br><br>
-
-                 <h5>PRODUCT DETAILS </h5>
-White solid formal shirt, has a spread collar, button placket, long sleeves, a patch pocket<br>
-
-<b>Size & Fit</b><br>
-Slim fit<br>
-The model (height 6') is wearing a size 40<br>
-
-<b>Material & Care</b><br>
-Cotton<br>
-Machine-wash<br>
+  </div>
+</div>
 </div>
 
-</div>
-     </div></div>
-     <div class="container">
-        <h2>New Arrivals</h2>
-        <div class="row">
-            <div class="col-md-3">
-              <div class="product-top">
-                <img src="images/dress1.webp">
-                <div class="overlay">
-                  <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
-                  </button></a>
-                 
-                  <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                  </button></a>
-                  
-                 
-                </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-               
-              <i class="fa fa-star-o"></i>
-              <h3>Dress1</h3>
-              <h5>Rs 5000</h5>
-    
-    
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-top">
-                <img src="images/dress11.webp">
-                <div class="overlay">
-                  <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
-                  </button></a>
-                 
-                  <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                  </button></a>
-                </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-               
-              <i class="fa fa-star-o"></i>
-              <h3>Dress2</h3>
-              <h5>Rs 5000</h5>
-    
-    
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-top">
-                <img src="images/dress12.webp">
-                <div class="overlay">
-                  <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
-                  </button></a>
-                 
-                  <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                  </button></a>
-                </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-               
-              <i class="fa fa-star-o"></i>
-              <h3>Dress3</h3>
-              <h5>Rs 5000</h5>
-              
-    
-    
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="product-top">
-                <img src="images/dress13.webp">
-                <div class="overlay">
-                  <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
-                  </button></a>
-                 
-                  <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                  </button></a>
-                </div>
-              </div>
-              <div class="product-bottom text-center">
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-    
-                <i class="fa fa-star" aria-hidden="true"></i>
-               
-              <i class="fa fa-star-o"></i>
-              <h3>Dress4</h3>
-              <h5>Rs 5000</h5>
-    
-    
-              </div>
-            </div>
-        </div>
-      </div>
 
-       
-
-    
-
-    </body>
-
-            
-
-
-               </body>
-               </html>
+</body>
+</html>

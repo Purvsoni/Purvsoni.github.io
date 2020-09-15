@@ -17,11 +17,12 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand">Cloth Shop</a>
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
 
@@ -29,20 +30,26 @@
                 <a class="nav-link" href="index.html">HOME</a>
             </li>
           
-
-
-        </ul>
-
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>&nbsp;&nbsp;
-      
-
-    </div>
+</ul>
+            <div class="mr-2">
+              <a href="shopcart.html">   <button type="button" class="btn btn-primary" >Cart (<span class="total-count"></span>)</button>
+            </div></a>
+            <div class="mr-2">
+          <button  class="clear-cart btn btn-danger">Clear Cart</button></div>
+            </div>
+       
+        </div>
+        
 </nav>
+ 
 </head>
 <body>
+ 
+  <p style="color: red;">
+    On Hovering over image,2 icons will be seen.
+    On Clicking view icon(eye),it will be redirected to productsingle.html page.
+    On clicking cart icon,product will be added to cart in navigation bar and on clicking cart button,it will be redirected to shopcart.html. 
+  </p>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
   crossorigin="anonymous"></script>
@@ -63,7 +70,8 @@
               <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
               </button></a>
              
-              <a href="cart.html"><button type="button" class="btn btn-secondary item-button" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            
+              <a href=""><button type="button" class="add-to-cart btn btn-secondary" data-name="Product1" data-price="2000" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
               </button></a>
             </div>
           </div>
@@ -77,8 +85,8 @@
             <i class="fa fa-star" aria-hidden="true"></i>
            
           <i class="fa fa-star-o"></i>
-         <span class="item title"><h3>Product1</h3></span>
-          <span class="item-price">Rs 5000</span>
+          <h3>Product1</h3>
+          <h5>Rs 5000</h5>
 
 
           </div>
@@ -87,10 +95,10 @@
           <div class="product-top">
             <img src="images/tshirt2.webp">
             <div class="overlay">
-              <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
+              <a href="productsingle.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
               </button></a>
-             
-              <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            
+              <a href=""><button type="button" class="add-to-cart btn btn-secondary" data-name="Product2" data-price="3000" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
               </button></a>
             </div>
           </div>
@@ -114,10 +122,10 @@
           <div class="product-top">
             <img src="images/tshirt1.webp">
             <div class="overlay">
-              <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
+              <a href="productsingle.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
               </button></a>
              
-              <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <a href=""><button type="button" class="add-to-cart btn btn-secondary" data-name="Product3" data-price="5000" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
               </button></a>
             </div>
           </div>
@@ -142,10 +150,10 @@
           <div class="product-top">
             <img src="images/tshirt13.webp">
             <div class="overlay">
-              <a href="productsingle.html" method><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
+              <a href="productsingle.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-eye" aria-hidden="true"></i>
               </button></a>
              
-              <a href="cart.html"><button type="button" class="btn btn-secondary" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <a href=""><button type="button" class="add-to-cart btn btn-secondary" data-name="Product4" data-price="4000" title="QuickShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
               </button></a>
             </div>
           </div>
@@ -167,5 +175,10 @@
         </div>
     </div>
   </div>
+ 
+  <script src="js/cart.js">
+    
+    
+  </script>
 </body>
 </html>
